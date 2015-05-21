@@ -1,0 +1,13 @@
+{
+  "title": "Tweet Token",
+  "type": "object",
+  "properties": {
+    "tweet": {
+      "$ref": "tweet.json",
+      "referenced": true
+    },
+    "token": {
+      "type": "string"
+    }
+  }
+}

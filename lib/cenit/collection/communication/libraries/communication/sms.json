@@ -1,0 +1,15 @@
+{
+  "title": "SMS",
+  "type": "object",
+  "properties": {
+    "from": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}
