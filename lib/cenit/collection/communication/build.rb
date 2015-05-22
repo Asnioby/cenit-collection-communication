@@ -1,4 +1,3 @@
-require 'cenit/collection/communication/version'
 require 'cenit/collection/base/build'
 
 module Cenit

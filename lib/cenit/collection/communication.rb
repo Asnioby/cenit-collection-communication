@@ -1,15 +1,7 @@
-require "cenit/collection/communication/version"
-
 module Cenit
   module Collection
-    require "cenit/collection/communication/build"
+    require File.expand_path(File.join(*%w[ communication build ]), File.dirname(__FILE__))
     require "cenit/client"
-
-    # bundle exec irb -I lib -r 'cenit/collection/communication'
-    # config = {:push_url => "https://www.cenithub.com/api/v1/push", :connection_token => "My Conn Token", :connection_key => "My Conn Key"}
-    # config = {:push_url => "https://www.cenithub.com/api/v1/push", :user_token => "My User Token", :user_key => "My User Key"}
-    # Cenit::Collection::Communication.push_collection config
-    # Cenit::Collection::Communication.shared_collection
 
     @communication = Cenit::Collection::Communication::Build.new
 
@@ -31,7 +23,11 @@ module Cenit
     end
 
     def self.push_sample(model, config)
-      Cenit::Client.push(@communication.sample_data(model).to_json, config)
+      Cenit::Client.push(@communication.sample_model(model).to_json, config)
+    end
+
+    def self.import(data)
+      @communication.import_data(data)
     end
   end
 end
