@@ -1,5 +1,7 @@
 {
   "name": "Communication Library",
   "category": "Library",
-  "description": "Communication Library"
+  "shared_version": "1.0.0",
+  "description": "Communication Library",
+  "data":  {"name": "Communication Library"}
 }
